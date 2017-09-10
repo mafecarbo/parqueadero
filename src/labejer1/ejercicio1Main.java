@@ -65,7 +65,7 @@ public class ejercicio1Main {
         Parqueadero p =new Parqueadero("parking", 85);
         Zona [] z= new Zona [3]; 
         for (int i=0; i<3; i++){
-            z[i]= new Zona ("Zona "+(i+1), i+1);
+            z[i]= new Zona ("zona"+(i+1), i+1);
         }
         p.setzonas(z);
         Estacionamiento[] e1= new Estacionamiento[5];
@@ -105,7 +105,7 @@ public class ejercicio1Main {
                     int hora;
                     
                     hora=flujoEn.nextInt();           
-                    if("Zona 1".equals(p.ZonaMenos())){
+                    if("zona1".equals(p.ZonaMenos())){
                       
                         for(int i=0; i<10;i++){
                             grua.move();
@@ -177,7 +177,7 @@ public class ejercicio1Main {
                         }
                         
                     }
-                    if("Zona 2".equals(p.ZonaMenos())){
+                    if("zona2".equals(p.ZonaMenos())){
                         
                         for(int i=0; i<7;i++){
                             grua.move();
@@ -247,7 +247,7 @@ public class ejercicio1Main {
                         
                     }
                     
-                    if("Zona 3".equals(p.ZonaMenos())){
+                    if("zona3".equals(p.ZonaMenos())){
                         
                         for(int i=0; i<4;i++){
                             grua.move();
@@ -378,8 +378,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e1[0].setCarros(null);
                                 }
                                 if(z[0].ContarEs()==2){
@@ -499,8 +499,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e1[0].setCarros(e1[1].getCarros());
                                     e1[1].setCarros(null);
                                 }
@@ -633,8 +633,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e1[0].setCarros(e1[1].getCarros());
                                     e1[1].setCarros(e1[2].getCarros());
                                     e1[2].setCarros(null);
@@ -785,8 +785,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e1[0].setCarros(e1[1].getCarros());
                                     e1[1].setCarros(e1[2].getCarros());
                                     e1[2].setCarros(e1[3].getCarros());
@@ -934,8 +934,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e1[0].setCarros(e1[1].getCarros());
                                     e1[1].setCarros(e1[2].getCarros());
                                     e1[2].setCarros(e1[3].getCarros());
@@ -958,8 +958,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e1[1].setCarros(null);
                                 }
                                 if(z[0].ContarEs()==3){
@@ -1079,8 +1079,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e1[1].setCarros(e1[2].getCarros());
                                     e1[2].setCarros(null);
                                 }
@@ -1213,8 +1213,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida,zona)+total;
                                     e1[1].setCarros(e1[2].getCarros());
                                     e1[2].setCarros(e1[3].getCarros());
                                     e1[3].setCarros(null);
@@ -1362,8 +1362,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e1[1].setCarros(e1[2].getCarros());
                                     e1[2].setCarros(e1[3].getCarros());
                                     e1[3].setCarros(e1[4].getCarros());
@@ -1385,8 +1385,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e1[2].setCarros(null);
                                 }
                                 if(z[0].ContarEs()==4){
@@ -1506,8 +1506,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e1[2].setCarros(e1[3].getCarros());
                                     e1[3].setCarros(null);
                                 }
@@ -1638,8 +1638,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e1[2].setCarros(e1[3].getCarros());
                                     e1[3].setCarros(e1[4].getCarros());
                                     e1[4].setCarros(null);
@@ -1660,8 +1660,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e1[3].setCarros(null);
                                 }
                                 if(z[0].ContarEs()==5){
@@ -1777,8 +1777,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e1[3].setCarros(e1[4].getCarros());
                                     e1[4].setCarros(null);
                                 }
@@ -1794,8 +1794,8 @@ public class ejercicio1Main {
                                     grua.move();
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e1[4].setCarros(null);
                                 }
                                  break;
@@ -1845,8 +1845,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e2[0].setCarros(null);
                                 }
                                 if(z[1].ContarEs()==2){
@@ -1966,8 +1966,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e2[0].setCarros(e2[1].getCarros());
                                     e2[1].setCarros(null);
                                 }
@@ -2100,8 +2100,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e2[0].setCarros(e2[1].getCarros());
                                     e2[1].setCarros(e2[2].getCarros());
                                     e2[2].setCarros(null);
@@ -2251,8 +2251,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e2[0].setCarros(e2[1].getCarros());
                                     e2[1].setCarros(e2[2].getCarros());
                                     e2[2].setCarros(e2[3].getCarros());
@@ -2400,8 +2400,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e2[0].setCarros(e2[1].getCarros());
                                     e2[1].setCarros(e2[2].getCarros());
                                     e2[2].setCarros(e2[3].getCarros());
@@ -2424,8 +2424,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e2[1].setCarros(null);
                                 }
                                 if(z[1].ContarEs()==3){
@@ -2545,8 +2545,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e2[1].setCarros(e2[2].getCarros());
                                     e2[2].setCarros(null);
                                 }
@@ -2679,8 +2679,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e2[1].setCarros(e2[2].getCarros());
                                     e2[2].setCarros(e2[3].getCarros());
                                     e2[3].setCarros(null);
@@ -2828,8 +2828,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e2[1].setCarros(e2[2].getCarros());
                                     e2[2].setCarros(e2[3].getCarros());
                                     e2[3].setCarros(e2[4].getCarros());
@@ -2851,8 +2851,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e2[2].setCarros(null);
                                 }
                                 if(z[1].ContarEs()==4){
@@ -2972,8 +2972,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e2[2].setCarros(e2[3].getCarros());
                                     e2[3].setCarros(null);
                                 }
@@ -3104,8 +3104,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e2[2].setCarros(e2[3].getCarros());
                                     e2[3].setCarros(e2[4].getCarros());
                                     e2[4].setCarros(null);
@@ -3126,8 +3126,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e2[3].setCarros(null);
                                 }
                                 if(z[1].ContarEs()==5){
@@ -3243,8 +3243,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e2[3].setCarros(e2[4].getCarros());
                                     e2[4].setCarros(null);
                                 }
@@ -3260,8 +3260,8 @@ public class ejercicio1Main {
                                     grua.move();
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e2[4].setCarros(null);
                                 } 
                                   break;  
@@ -3312,8 +3312,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e3[0].setCarros(null);
                                 }
                                 if(z[2].ContarEs()==2){
@@ -3433,8 +3433,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e3[0].setCarros(e3[1].getCarros());
                                     e3[1].setCarros(null);
                                 }
@@ -3567,8 +3567,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e3[0].setCarros(e3[1].getCarros());
                                     e3[1].setCarros(e3[2].getCarros());
                                     e3[2].setCarros(null);
@@ -3718,8 +3718,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e3[0].setCarros(e3[1].getCarros());
                                     e3[1].setCarros(e3[2].getCarros());
                                     e3[2].setCarros(e3[3].getCarros());
@@ -3867,8 +3867,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e3[0].setCarros(e3[1].getCarros());
                                     e3[1].setCarros(e3[2].getCarros());
                                     e3[2].setCarros(e3[3].getCarros());
@@ -3891,8 +3891,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e3[1].setCarros(null);
                                 }
                                 if(z[2].ContarEs()==3){
@@ -4012,8 +4012,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e3[1].setCarros(e3[2].getCarros());
                                     e3[2].setCarros(null);
                                 }
@@ -4146,8 +4146,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e3[1].setCarros(e3[2].getCarros());
                                     e3[2].setCarros(e3[3].getCarros());
                                     e3[3].setCarros(null);
@@ -4295,8 +4295,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e3[1].setCarros(e3[2].getCarros());
                                     e3[2].setCarros(e3[3].getCarros());
                                     e3[3].setCarros(e3[4].getCarros());
@@ -4318,8 +4318,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e3[2].setCarros(null);
                                 }
                                 if(z[1].ContarEs()==4){
@@ -4439,8 +4439,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e3[2].setCarros(e3[3].getCarros());
                                     e3[3].setCarros(null);
                                 }
@@ -4571,8 +4571,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e3[2].setCarros(e3[3].getCarros());
                                     e3[3].setCarros(e3[4].getCarros());
                                     e3[4].setCarros(null);
@@ -4593,8 +4593,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e3[3].setCarros(null);
                                 }
                                 if(z[2].ContarEs()==5){
@@ -4710,8 +4710,8 @@ public class ejercicio1Main {
                                     }
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e3[3].setCarros(e3[4].getCarros());
                                     e3[4].setCarros(null);
                                 }
@@ -4727,8 +4727,8 @@ public class ejercicio1Main {
                                     grua.move();
                                     System.out.println("Porfavor digite su hora de salida: ");
                                     horasalida=flujoEn.nextInt();
-                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida));
-                                    total=p.cobrar(horasalida, placasalida)+total;
+                                    System.out.println("Por favor pagar: "+p.cobrar(horasalida, placasalida, zona));
+                                    total=p.cobrar(horasalida, placasalida, zona)+total;
                                     e3[4].setCarros(null);
                                 } 
                                     break;

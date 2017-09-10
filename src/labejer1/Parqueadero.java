@@ -106,9 +106,10 @@ public class Parqueadero {
         }
         return 0;
     }
-    public int cobrar(int horasalida, String placa){
+    public int cobrar(int horasalida, String placa, String zona){
         int a, b, c, d;
         for (int i=0; i<3; i++){
+           if(zona.equals(this.zonas[i].getNombreZ())){
             d=horasalida-this.zonas[i].cobrar(horasalida, placa);
             if (d>=1 && d<=59){
                 c=d*this.Tarifa;
@@ -120,6 +121,7 @@ public class Parqueadero {
                 c=a+b;
                 return c;
             }
+           }
         }
         
         return 0;
