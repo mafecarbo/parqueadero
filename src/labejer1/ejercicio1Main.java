@@ -3268,7 +3268,7 @@ public class ejercicio1Main {
                                 }
                             }
                             grua.turnLeft();
-                            for(int i=0; i<10;i++){
+                            for(int i=0; i<7;i++){
                                 grua.move();
                             }
                             for(int i=0; i<3;i++){
@@ -4735,7 +4735,7 @@ public class ejercicio1Main {
                                 }
                             }
                             grua.turnLeft();
-                            for(int i=0; i<10;i++){
+                            for(int i=0; i<4;i++){
                                 grua.move();
                             }
                             for(int i=0; i<3;i++){
