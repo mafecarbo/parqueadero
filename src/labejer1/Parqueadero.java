@@ -19,6 +19,16 @@ public class Parqueadero {
         this.NombreP = NombreP;
         this.Tarifa = Tarifa;
         this.zonas= new Zona[3];
+        
+    }
+
+
+    public Zona[] getZonas() {
+        return zonas;
+    }
+
+    public void setZonas(Zona[] zonas) {
+        this.zonas = zonas;
     }
 
     public String getNombreP() {
@@ -133,5 +143,12 @@ public class Parqueadero {
           } 
         }
     }
-    
+    public String info(String placa, String zona){
+        for (int i=0; i<3; i++){
+            if(this.zonas[i].getNombreZ().equals(zona)){
+                return this.zonas[i].info(placa);
+            }
+        }
+        return null;
+    }
 }

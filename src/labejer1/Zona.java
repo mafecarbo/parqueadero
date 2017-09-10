@@ -87,7 +87,14 @@ public class Zona {
        }
        return 0;
    }
-   
+   public String info(String placa){
+       for (int i=0; i<5; i++){
+           if (this.espacio[i].info(placa)!= null){
+               return this.espacio[i].info(placa)+" "+this.NombreZ;
+           }
+       }
+       return null;
+   }
    public int est (String placa){
        for (int i=0; i<5; i++){
            if (this.espacio[i].est(placa)!=0){

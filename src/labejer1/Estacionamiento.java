@@ -63,4 +63,10 @@ public class Estacionamiento {
       Carro carro=new Carro(placa, horallegada);
          this.carros =carro;
     }
+    public String info(String placa){
+        if(this.carros.getPlaca().equals(placa)){
+            return "Su carro es: "+this.carros.getPlaca()+" llego a las: "+ this.carros.getHorallegada()+" el cual esta en el Estacionamiento "+this.Numero;
+        }
+        return null;
+    }
 }

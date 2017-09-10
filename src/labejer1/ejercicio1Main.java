@@ -4761,7 +4761,7 @@ public class ejercicio1Main {
                     break;
                 }
                 case 3:{
-                    System.out.println("Bienvenido a la opcion de revisar la ubicacion de su carro, por favor introdusca su clave y la zona donde se encuentra su carro ");
+                    System.out.println("Bienvenido a la opcion de revisar la ubicacion de su carro, por favor introdusca su clave y la zona en la que esta su carro ");
                     int s;
                     String placar;
                     placar=flujoEn.next();
@@ -4786,7 +4786,7 @@ public class ejercicio1Main {
                                    for(int i=0; i<5;i++){
                                         grua.move();
                                    }
-                                   System.out.println("Su carro esta en la Zona 1 Estacionamiento 1");
+                                   System.out.println(p.info(placar, zonar));
                                    System.out.println("Oprima un numero para seguir");
                                    s=flujoEn.nextInt();
                                    for(int i=0; i<2;i++){
@@ -4833,7 +4833,7 @@ public class ejercicio1Main {
                                    for(int i=0; i<4;i++){
                                         grua.move();
                                    }
-                                   System.out.println("Su carro esta en la Zona 1 Estacionamiento 2");
+                                   System.out.println(p.info(placar, zonar));
                                    System.out.println("Oprima un numero para seguir");
                                    s=flujoEn.nextInt();
                                    for(int i=0; i<2;i++){
@@ -4880,7 +4880,7 @@ public class ejercicio1Main {
                                    for(int i=0; i<3;i++){
                                         grua.move();
                                    }
-                                   System.out.println("Su carro esta en la Zona 1 Estacionamiento 3");
+                                   System.out.println(p.info(placar, zonar));
                                    System.out.println("Oprima un numero para seguir");
                                    s=flujoEn.nextInt();
                                    for(int i=0; i<2;i++){
@@ -4927,7 +4927,7 @@ public class ejercicio1Main {
                                    for(int i=0; i<2;i++){
                                         grua.move();
                                    }
-                                   System.out.println("Su carro esta en la Zona 1 Estacionamiento 4");
+                                   System.out.println(p.info(placar, zonar));
                                    System.out.println("Oprima un numero para seguir");
                                    s=flujoEn.nextInt();
                                    for(int i=0; i<2;i++){
@@ -4972,7 +4972,7 @@ public class ejercicio1Main {
                                         grua.turnLeft();
                                     }
                                    grua.move();
-                                   System.out.println("Su carro esta en la Zona 1 Estacionamiento 5");
+                                   System.out.println(p.info(placar, zonar));
                                    System.out.println("Oprima un numero para seguir");
                                    s=flujoEn.nextInt();
                                    for(int i=0; i<2;i++){
@@ -5021,7 +5021,7 @@ public class ejercicio1Main {
                                    for(int i=0; i<5;i++){
                                         grua.move();
                                    }
-                                   System.out.println("Su carro esta en la Zona 2 Estacionamiento 1");
+                                   System.out.println(p.info(placar, zonar));
                                    System.out.println("Oprima un numero para seguir");
                                    s=flujoEn.nextInt();
                                    for(int i=0; i<2;i++){
@@ -5068,7 +5068,7 @@ public class ejercicio1Main {
                                    for(int i=0; i<4;i++){
                                         grua.move();
                                    }
-                                   System.out.println("Su carro esta en la Zona 2 Estacionamiento 2");
+                                  System.out.println(p.info(placar, zonar));
                                    System.out.println("Oprima un numero para seguir");
                                    s=flujoEn.nextInt();
                                    for(int i=0; i<2;i++){
@@ -5115,7 +5115,7 @@ public class ejercicio1Main {
                                    for(int i=0; i<3;i++){
                                         grua.move();
                                    }
-                                   System.out.println("Su carro esta en la Zona 2 Estacionamiento 3");
+                                  System.out.println(p.info(placar, zonar));
                                    System.out.println("Oprima un numero para seguir");
                                    s=flujoEn.nextInt();
                                    for(int i=0; i<2;i++){
@@ -5162,7 +5162,7 @@ public class ejercicio1Main {
                                    for(int i=0; i<2;i++){
                                         grua.move();
                                    }
-                                   System.out.println("Su carro esta en la Zona 2 Estacionamiento 4");
+                                   System.out.println(p.info(placar, zonar));
                                    System.out.println("Oprima un numero para seguir");
                                    s=flujoEn.nextInt();
                                    for(int i=0; i<2;i++){
@@ -5207,7 +5207,7 @@ public class ejercicio1Main {
                                         grua.turnLeft();
                                     }
                                    grua.move();
-                                   System.out.println("Su carro esta en la Zona 2 Estacionamiento 5");
+                                   System.out.println(p.info(placar, zonar));
                                    System.out.println("Oprima un numero para seguir");
                                    s=flujoEn.nextInt();
                                    for(int i=0; i<2;i++){
@@ -5256,7 +5256,7 @@ public class ejercicio1Main {
                                    for(int i=0; i<5;i++){
                                         grua.move();
                                    }
-                                   System.out.println("Su carro esta en la Zona 3 Estacionamiento 1");
+                                   System.out.println(p.info(placar, zonar));
                                    System.out.println("Oprima un numero para seguir");
                                    s=flujoEn.nextInt();
                                    for(int i=0; i<2;i++){
@@ -5303,7 +5303,7 @@ public class ejercicio1Main {
                                    for(int i=0; i<4;i++){
                                         grua.move();
                                    }
-                                   System.out.println("Su carro esta en la Zona 3 Estacionamiento 2");
+                                   System.out.println(p.info(placar, zonar));
                                    System.out.println("Oprima un numero para seguir");
                                    s=flujoEn.nextInt();
                                    for(int i=0; i<2;i++){
@@ -5350,7 +5350,7 @@ public class ejercicio1Main {
                                    for(int i=0; i<3;i++){
                                         grua.move();
                                    }
-                                   System.out.println("Su carro esta en la Zona 3 Estacionamiento 3");
+                                   System.out.println(p.info(placar, zonar));
                                    System.out.println("Oprima un numero para seguir");
                                    s=flujoEn.nextInt();
                                    for(int i=0; i<2;i++){
@@ -5397,7 +5397,7 @@ public class ejercicio1Main {
                                    for(int i=0; i<2;i++){
                                         grua.move();
                                    }
-                                   System.out.println("Su carro esta en la Zona 3 Estacionamiento 4");
+                                   System.out.println(p.info(placar, zonar));
                                    System.out.println("Oprima un numero para seguir");
                                    s=flujoEn.nextInt();
                                    for(int i=0; i<2;i++){
@@ -5442,7 +5442,7 @@ public class ejercicio1Main {
                                         grua.turnLeft();
                                     }
                                    grua.move();
-                                   System.out.println("Su carro esta en la Zona 3 Estacionamiento 5");
+                                   System.out.println(p.info(placar, zonar));
                                    System.out.println("Oprima un numero para seguir");
                                    s=flujoEn.nextInt();
                                    for(int i=0; i<2;i++){
