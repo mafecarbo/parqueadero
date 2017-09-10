@@ -331,7 +331,7 @@ public class ejercicio1Main {
                     for(int i=0; i<2;i++){
                         grua.turnLeft();
                     }
-                    
+                    System.out.println("No se le ovide que su carro esta en la zona: "+p.ZonaMenos()+". Ya que con el conocimiento de esa zona podra sacar su auto");
                     p.agregarCarro(placa, hora, p.ZonaMenos());
                     System.out.println("Si desea volver a nuestro menu de opciones escriba true, si por otro lado desea salir escriba false");
                     f=flujoEn.nextBoolean();
@@ -344,16 +344,18 @@ public class ejercicio1Main {
                     grua.turnLeft();
                     grua.move();
                     grua.turnLeft();
-                    System.out.println("Para retirar su carro por favor escriba las placas");
+                    System.out.println("Para retirar su carro por favor escriba las placas y la Zona en la que se encuentra su carro");
                     String placasalida;
+                    String zona;
                     placasalida=flujoEn.next();
+                    zona=flujoEn.next();
                     int horasalida;
-                    if(p.estacarro(placasalida)==false){
+                    if(p.estacarro(placasalida, zona)==false){
                        System.out.println("Su carro no se encuentra en este parqueadero");
                        break;
                     }
                     else{
-                        switch(p.zonan(placasalida)){
+                        switch(p.zona(placasalida, zona)){
                             case 1: {
                                 for(int i=0; i<10;i++){
                                 grua.move();
@@ -361,7 +363,7 @@ public class ejercicio1Main {
                             for(int i=0; i<3; i++){
                                 grua.turnLeft();
                             }
-                            switch(p.est(placasalida)){
+                            switch(p.est(placasalida,zona)){
                                 case 1:{
                                     if(z[0].ContarEs()==1){
                                     for(int i=0; i<5;i++){
@@ -1828,7 +1830,7 @@ public class ejercicio1Main {
                             for(int i=0; i<3; i++){
                                 grua.turnLeft();
                             }
-                            switch(p.est(placasalida)){
+                            switch(p.est(placasalida, zona)){
                                 case 1: {
                                     if(z[1].ContarEs()==1){
                                     for(int i=0; i<5;i++){
@@ -3295,7 +3297,7 @@ public class ejercicio1Main {
                             for(int i=0; i<3; i++){
                                 grua.turnLeft();
                             }
-                            switch(p.est(placasalida)){
+                            switch(p.est(placasalida, zona)){
                                 case 1:{
                                     if(z[2].ContarEs()==1){
                                     for(int i=0; i<5;i++){
@@ -4759,14 +4761,15 @@ public class ejercicio1Main {
                     break;
                 }
                 case 3:{
-                    System.out.println("Bienvenido a la opcion de revisar la ubicacion de su carro, por favor introdusca su clave: ");
+                    System.out.println("Bienvenido a la opcion de revisar la ubicacion de su carro, por favor introdusca su clave y la zona donde se encuentra su carro ");
                     int s;
                     String placar;
-                    
                     placar=flujoEn.next();
-                    switch (p.zonan(placar)){
+                    String zonar;
+                    zonar=flujoEn.next();
+                    switch (p.zona(placar,zonar)){
                         case 1:{
-                            switch(p.est(placar)){
+                            switch(p.est(placar, zonar)){
                                case 1:{
                                    for(int i=0; i<12;i++){
                                         grua.move();
@@ -5001,7 +5004,7 @@ public class ejercicio1Main {
                            break;
                         }
                         case 2:{
-                            switch(p.est(placar)){
+                            switch(p.est(placar, zonar)){
                                case 1:{
                                    for(int i=0; i<12;i++){
                                         grua.move();
@@ -5236,7 +5239,7 @@ public class ejercicio1Main {
                             break;
                         }
                         case 3:{
-                            switch(p.est(placar)){
+                            switch(p.est(placar, zonar)){
                                case 1:{
                                    for(int i=0; i<12;i++){
                                         grua.move();

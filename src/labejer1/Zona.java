@@ -79,14 +79,15 @@ public class Zona {
        }
        return false;
    }
-   public String zona(String placa){
+   public int zona(String placa){
        for (int i=0; i<5; i++){
            if (this.espacio[i].verificacion(placa)==true){
-               return this.NombreZ;
+               return this.NumeroZ;
            }
        }
-       return null;
+       return 0;
    }
+   
    public int est (String placa){
        for (int i=0; i<5; i++){
            if (this.espacio[i].est(placa)!=0){

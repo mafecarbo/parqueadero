@@ -81,33 +81,26 @@ public class Parqueadero {
         return null;
     } 
     
-    public boolean estacarro(String placa){
+    public boolean estacarro(String placa, String zona){
         for (int i=0; i<3; i++){
-            if(this.zonas[i].app(placa)==true){
-                return true;
+            if(this.zonas[i].getNombreZ().equals(zona)){
+                return this.zonas[i].app(placa);
             }
         }
         return false;
     }
-    public String zona(String placa){
+    public int zona(String placa, String zona){
         for (int i=0; i<3; i++){
-            if(this.zonas[i].zona(placa).equals(this.zonas[i].getNombreZ())){
-                return this.zonas[i].getNombreZ();
-            }
-        }
-        return null;
-    }
-    public int zonan(String placa){
-        for (int i=0; i<3; i++){
-            if(this.zonas[i].zona(placa).equals(this.zonas[i].getNombreZ())){
-                return this.zonas[i].getNumeroZ();
+            if(this.zonas[i].getNombreZ().equals(zona)){
+                return this.zonas[i].zona(placa);
             }
         }
         return 0;
     }
-    public int est(String placa){
+    
+    public int est(String placa, String zona){
         for (int i=0; i<3; i++){
-            if(this.zonas[i].est(placa)!=0){
+            if(this.zonas[i].getNombreZ().equals(zona)){
                 return this.zonas[i].est(placa);
             }
         }

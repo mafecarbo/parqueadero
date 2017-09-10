@@ -46,6 +46,7 @@ public class Estacionamiento {
     public boolean verificacion(String placa){
         return this.carros.getPlaca().equals(placa);
     }
+    
     public int est(String placa){
         if(this.carros.getPlaca().equals(placa)){
             return this.Numero;
